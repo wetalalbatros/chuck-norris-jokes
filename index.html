@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chuk Norris jokes generator</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="joke-generator-page">
+        <div class="main-content">
+            <div class="main-content-wrapper">
+                <a href="#" class="header-logo">MSI 2020</a>
+                <div class="welcome-block">
+                    <p class="welcome-text-lg">Hey!</p>
+                    <p class="welcome-text-md">Let’s try to find a joke for you:</p>
+                </div>
+                <form action="https://api.chucknorris.io/jokes/" class="select-joke-form" id="select-joke-form">
+                    <div class="form_radio">
+                        <input id="random-joke" type="radio" name="joke-type" value="random-joke">
+                        <label for="random-joke">Random</label>
+                    </div>
+
+                    <div class="form_radio">
+                        <input id="joke-from-category" type="radio" name="joke-type" value="joke-from-category">
+                        <label for="joke-from-category">From categories</label>
+                    </div>
+                    <div class="additon-parameters" id="joke-categories-list"></div>
+
+                    <div class="form_radio">
+                        <input id="search-joke" type="radio" name="joke-type" value="search-joke">
+                        <label for="search-joke">Search</label>
+                    </div>
+                    <div class="form-group additon-parameters" id="joke-search-field">
+
+                    </div>
+
+                    <input type="submit" id="find-joke" class="btn btn-send-form" value="Get a joke" disabled>
+                </form>
+
+                <div class="joke-list" id="joke-list"></div>
+            </div>
+        </div>
+        <div class="right-open-btn" id="menuToggle">
+            <input type="checkbox" id="menuToggleInput" />
+            <span class='first-child'></span>
+            <span></span>
+            <span></span>
+        </div>
+        <h2 class="favorite-jokes-title toggle">Favorite</h2>
+          <div class="blocker" id='blocker'>
+          </div>
+        <div class="favorite-jokes-sidebar" id='favorite-jokes-sidebar'>
+            <h3 class="favorite-jokes-title">Favorite</h3>
+            <div id="favorite-jokes-feed" class="favorite-jokes-feed">
+                <!--
+                <div class="favorite-joke-item">
+                    <span class="joke-favorite-icon sidebar-favorite-icon active"></span>
+                    <span class="joke-type joke-type-grey favorite-joke-type">
+                        <i class="joke-type-text-icon">
+                            <span class="joke-type-text-line"></span>
+                            <span class="joke-type-text-line"></span>
+                            <span class="joke-type-text-line"></span>
+                        </i>
+                    </span>
+                    <p class="joke-id">ID: <a href="#" class="joke-id-link">XNaAxUduSw6zANDaIEab7A <i class="joke-id-link-icon"></i></a></p>
+                    <p class="favorite-joke-text">No one truly knows who's Chuck Norris' real father. No one is biologically strong enough for this. He must've conceived himself.</p>
+                    <p class="joke-last-update">Last update: 1923 hours ago</p>
+                </div>
+-->
+            </div>
+        </div>
+    </div>
+    <script src="script/script.js"></script>
+</body>
+
+</html>
